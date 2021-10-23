@@ -21,3 +21,467 @@ tutorial
 Videos
 Sat Oct 23 11:45:03 +08 2021
 ls: cannot access 'xxxx': No such file or directory
+
+# hanchochang @ ubuntu in ~/share on git:master x [17:51:04] 
+$ cd ../mynewrepo 
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master o [17:51:24] 
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master o [17:51:50] 
+$ touch README
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [17:52:10] 
+$ git add README
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [17:52:24] 
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   README
+
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [17:52:49] 
+$ touch newfile
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [17:54:54] 
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   README
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	newfile
+
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [17:55:03] 
+$ cd  
+
+# hanchochang @ ubuntu in ~ [17:56:08] 
+$ cat temt.txt >> mynewrepo/newfile 
+
+# hanchochang @ ubuntu in ~ [17:56:24] 
+$ cd mynewrepo 
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [17:56:31] 
+$ cat newfile 
+bioinf
+chr22_with_ERCC92.gtf
+Desktop
+Documents
+Downloads
+examples.desktop
+get-docker.sh
+miniconda3
+Music
+Pictures
+project
+Public
+share
+srr
+SRR6213653_1.fastq.gz.partial
+SRR949627_1.fastq.gz.partial
+Templates
+temt.txt
+test2.sh
+tutorial
+Videos
+Sat Oct 23 11:45:03 +08 2021
+ls: cannot access 'xxxx': No such file or directory
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [17:56:37] 
+$ git add newfile
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [17:56:57] 
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   README
+	new file:   newfile
+
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [17:57:02] 
+$ git commit -m "My first commit"
+[master (root-commit) f67c5d6] My first commit
+ 2 files changed, 23 insertions(+)
+ create mode 100644 README
+ create mode 100644 newfile
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master o [17:58:02] 
+$ git commit
+On branch master
+nothing to commit, working tree clean
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master o [17:58:52] C:1
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master o [18:00:05] 
+$ echo "Lockdown Learning Special: Introduction to Git" > README
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [18:02:42] 
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   README
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [18:02:53] 
+$ git commit -m "Changed README"
+On branch master
+Changes not staged for commit:
+	modified:   README
+
+no changes added to commit
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [18:05:48] C:1
+$ git commit -a -m "Changed README"
+[master 6483b2b] Changed README
+ 1 file changed, 1 insertion(+)
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master o [18:06:21] 
+$ git diff
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master o [18:06:51] 
+$ git diff
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master o [19:01:43] 
+$ echo "This is a README file for a test project" >> README
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [19:02:40] 
+$ git diff                                                 
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [19:03:12] 
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   README
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [19:12:49] 
+$ git commit -a -m "A Second change to README"
+[master 87819f9] A Second change to README
+ 1 file changed, 1 insertion(+)
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master o [19:13:31] 
+$ git diff
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master o [19:13:53] 
+$ git log
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master o [19:14:56] 
+$ mkdir data
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master o [19:46:21] 
+$ echo 'data' > .gitignore
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [19:46:53] 
+$ cp ~/chr22_with_ERCC92.gtf data/
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [19:47:32] 
+$ ls
+data  newfile  README
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [19:47:35] 
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [19:47:51] 
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [19:49:19] 
+$ cat .gitignore 
+data
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [19:50:35] 
+$ git commit -a -m "Committing .gitignore"
+On branch master
+Untracked files:
+	.gitignore
+
+nothing added to commit but untracked files present
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [19:53:49] C:1
+$ echo "A destructive change" > README
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [19:55:28] 
+$ git commit -a -m "oops"
+[master 6286598] oops
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [19:55:56] 
+$ git log
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [19:56:12] 
+$ git diff
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [19:57:00] 
+$ git log 
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [19:57:59] 
+$ git reset --hard 87819f90990f44e7aabedfa791eeff37110eed26
+HEAD is now at 87819f9 A Second change to README
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [19:58:18] 
+$ cat README 
+Lockdown Learning Special: Introduction to Git
+This is a README file for a test project
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [19:58:31] 
+$ git remote add origin https://github.com/pathscientist/git-test.git
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [20:16:42] 
+$ ls
+data  newfile  README
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [20:16:48] 
+$ cd
+
+# hanchochang @ ubuntu in ~ [20:16:55] 
+$ git remote add origin https://github.com/pathscientist/git-test.git
+fatal: not a git repository (or any of the parent directories): .git
+
+# hanchochang @ ubuntu in ~ [20:17:01] C:128
+$ cd mynewrepo 
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [20:20:24] 
+$ git remote add origin https://github.com/pathscientist/git-test.git
+fatal: remote origin already exists.
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [20:20:31] C:128
+$ git push origin master
+Username for 'https://github.com': pathscientist
+Password for 'https://pathscientist@github.com': 
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/pathscientist/git-test.git/'
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [20:21:15] C:128
+$ git push origin master
+Username for 'https://github.com': ^C
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [20:23:32] C:130
+$ git remote add origin https://github.com/pathscientist/git-test.git
+fatal: remote origin already exists.
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [20:24:31] C:128
+$ git push -u origin main
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [20:26:32] C:1
+$ git config -l
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [20:28:59] 
+$ git pull -v
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [20:29:35] C:1
+$ git config --global --unset credential.helper
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [20:34:04] C:5
+$ git pull                                     
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [20:36:35] C:1
+$ git push origin master                                             
+fatal: unable to access 'https://github.com/pathscientist/git-test.git/': gnutls_handshake() failed: Error in the pull function.
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [20:37:06] C:128
+$ git push -u origin main
+error: src refspec main does not match any.
+error: failed to push some refs to 'https://github.com/pathscientist/git-test.git'
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [20:38:10] C:1
+$ cd
+
+# hanchochang @ ubuntu in ~ [20:41:30] 
+$ git --version 
+git version 2.17.1
+
+# hanchochang @ ubuntu in ~ [20:41:36] 
+$ sudo apt-get install git
+[sudo] password for hanchochang: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+git is already the newest version (1:2.17.1-1ubuntu0.9).
+The following packages were automatically installed and are no longer required:
+  efibootmgr libfwup1
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 110 not upgraded.
+
+# hanchochang @ ubuntu in ~ [20:42:09] 
+$ cd mynewrepo 
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [20:44:06] 
+$ git remote add origin git@github.com:pathscientist/git-test.git
+fatal: remote origin already exists.
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [20:44:26] C:128
+$ git push -u origin master
+Username for 'https://github.com': ^C
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [20:45:00] C:130
+$ git push -u origin master
+fatal: unable to access 'https://github.com/pathscientist/git-test.git/': gnutls_handshake() failed: Error in the pull function.
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [20:45:23] C:128
+$ git push -u origin master
+fatal: unable to access 'https://github.com/pathscientist/git-test.git/': Failed to connect to github.com port 443: Connection refused
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [20:45:49] C:128
+$ git push -u origin master
+fatal: unable to access 'https://github.com/pathscientist/git-test.git/': Failed to connect to github.com port 443: Connection refused
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [20:47:43] C:128
+$ git push -u origin master
+fatal: unable to access 'https://github.com/pathscientist/git-test.git/': gnutls_handshake() failed: Error in the pull function.
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [20:48:07] C:128
+$ git push -u origin master
+^C
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [20:48:41] C:130
+$ git push origin master                                      
+fatal: unable to access 'https://github.com/pathscientist/git-test.git/': Failed to connect to github.com port 443: Connection refused
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [20:49:14] C:128
+$ git remote add origin git@github.com:pathscientist/mynewrepo.git
+fatal: remote origin already exists.
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [20:52:01] C:128
+$ git push origin master                                          
+Username for 'https://github.com': pathscientist
+Password for 'https://pathscientist@github.com': 
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/pathscientist/git-test.git/'
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [20:52:31] C:128
+$ git push origin master
+Username for 'https://github.com': pathscientist
+Password for 'https://pathscientist@github.com': 
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/pathscientist/git-test.git/'
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [20:53:14] C:128
+$ 
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [20:53:27] C:130
+$ git push origin master
+Username for 'https://github.com': pathscientist
+Password for 'https://pathscientist@github.com': 
+Counting objects: 10, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (10/10), 1.09 KiB | 223.00 KiB/s, done.
+Total 10 (delta 0), reused 0 (delta 0)
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/pathscientist/mynewrepo.git
+To https://github.com/pathscientist/git-test.git
+ * [new branch]      master -> master
+
+# hanchochang @ ubuntu in ~/mynewrepo on git:master x [20:58:14] 
+$ cd
+
+# hanchochang @ ubuntu in ~ [20:58:28] 
+$ cat git_tokens
+cat: git_tokens: No such file or directory
+
+# hanchochang @ ubuntu in ~ [20:58:58] C:1
+$ touch git_tokens
+
+# hanchochang @ ubuntu in ~ [20:59:48] 
+$ echo "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" > git_tokens 
+
+# hanchochang @ ubuntu in ~ [21:00:02] 
+$ ll
+total 514M
+-rw-rw-r--  1 hanchochang hanchochang  104 Oct 23 11:51 1
+drwxr-xr-x  6 hanchochang hanchochang 4.0K Apr 12  2020 bioinf
+drwxrwxr-x  3 hanchochang hanchochang 4.0K Oct 23 17:47 Bioinformatics-Resources
+-rw-r--r--  1 hanchochang hanchochang  30M Oct 24  2018 chr22_with_ERCC92.gtf
+drwxr-xr-x  2 hanchochang hanchochang 4.0K Feb 16  2020 Desktop
+drwxr-xr-x  2 hanchochang hanchochang 4.0K Feb 16  2020 Documents
+drwxr-xr-x  4 hanchochang hanchochang 4.0K Feb 16  2020 Downloads
+-rw-r--r--  1 hanchochang hanchochang 8.8K Feb 16  2020 examples.desktop
+-rw-r--r--  1 hanchochang hanchochang  15K Jun 16 02:32 get-docker.sh
+-rw-rw-r--  1 hanchochang hanchochang   41 Oct 23 21:00 git_tokens
+drwxr-xr-x 20 hanchochang hanchochang 4.0K Jul 15 19:47 miniconda3
+drwxr-xr-x  2 hanchochang hanchochang 4.0K Feb 16  2020 Music
+drwxrwxr-x  4 hanchochang hanchochang 4.0K Oct 23 19:58 mynewrepo
+drwxr-xr-x  2 hanchochang hanchochang 4.0K Feb 16  2020 Pictures
+drwxr-xr-x  3 hanchochang hanchochang 4.0K Apr 11  2020 project
+drwxr-xr-x  2 hanchochang hanchochang 4.0K Feb 16  2020 Public
+drwxr-xr-x  9 hanchochang hanchochang 4.0K Oct 23 17:50 share
+-rw-r--r--  1 hanchochang hanchochang   11 Apr 11  2020 srr
+-rw-r--r--  1 hanchochang hanchochang 108M Apr 11  2020 SRR6213653_1.fastq.gz.partial
+-rw-r--r--  1 hanchochang hanchochang 377M Apr 11  2020 SRR949627_1.fastq.gz.partial
+drwxr-xr-x  2 hanchochang hanchochang 4.0K Feb 16  2020 Templates
+-rw-rw-r--  1 hanchochang hanchochang  323 Oct 23 11:52 temt.txt
+-rwxr--r--  1 hanchochang hanchochang   33 Jul 12 01:06 test2.sh
+drwxr-xr-x  3 hanchochang hanchochang 4.0K Jun 30 02:23 tutorial
+drwxr-xr-x  2 hanchochang hanchochang 4.0K Feb 16  2020 Videos
+
