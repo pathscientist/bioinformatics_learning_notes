@@ -5,6 +5,14 @@ why I cann't push form my windows bash?
 尝试了虚拟机的命令行和windows的git bash，push都是很难成功，都快要放弃了试了试github desktop发现配置好新的proven后居然可以push了，真是要感动哭了
 
 some useful material to read
-https://video.ucdavis.edu/media/Reproducible+Research+for+Teams+with+GitHub+%E2%80%93+2021-05-28/1_y8sv6z14
+
+Pro Git book
+https://git-scm.com/book/en/v2
 
 https://happygitwithr.com/index.html
+
+UC Davis DataLab: Introduction to Version Control with Git
+https://www.youtube.com/watch?v=Acb4uab6YUY
+
+Reproducible Research for Teams with GitHub – 2021-05-28
+https://video.ucdavis.edu/media/Reproducible+Research+for+Teams+with+GitHub+%E2%80%93+2021-05-28/1_y8sv6z14
