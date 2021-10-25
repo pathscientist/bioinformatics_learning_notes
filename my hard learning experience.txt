@@ -12,7 +12,9 @@ https://git-scm.com/book/en/v2
 https://happygitwithr.com/index.html
 
 UC Davis DataLab: Introduction to Version Control with Git
+https://ucdavisdatalab.github.io/workshop_introduction_to_version_control/
 https://www.youtube.com/watch?v=Acb4uab6YUY
 
 Reproducible Research for Teams with GitHub – 2021-05-28
+https://ucdavisdatalab.github.io/workshop_git_for_teams/
 https://video.ucdavis.edu/media/Reproducible+Research+for+Teams+with+GitHub+%E2%80%93+2021-05-28/1_y8sv6z14
